@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            {% for article in articles %}
+
+            <div class="col-md-6">
+        <div class="card mb-3" >
+            <div class="bg-custom">
+                  <div class="col-md-5">
+                    <img src="{{ article.image}}" alt="article images" style="height: 100px;width: 150px;">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title" style="font-size: 15px;">Article Description: {{ article.description | truncate(100)}}</h5>
+                      <p class="card-text" style="font-size: 15px;">Created on: {{ article.timecreated }}</p>
+                      <a href="{{ article.articlelink }}" class="btn btn-primary">View full article</a>
+                    </div>
+                  </div>
+
+            </div>
+          </div><br><br></div>
+{% endfor %}
+
+    </div>
+  </div>
+
+{% endblock %}
