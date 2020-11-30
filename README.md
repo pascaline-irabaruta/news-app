@@ -36,5 +36,6 @@ export NEWS_API_KEY=<your-api-key>
 ## contact details
 You may contact me on  pascyirabaruta456@gmail.com
 ### License
-*MIT*
-Copyright (c) 2019 **Pascaline Irabaruta**
+This project is license  by MIT for more information visit [LICENSE.md](LICENSE.md) .
+### copyright information
+Copyright (c) 2020 **Pascaline Irabaruta**
