@@ -2,7 +2,7 @@
 #### Web app shows various news-sources and shows a user articles written from the sources
 #### By **Pascaline Irabaruta**
 ## Link to live site
-   ---------------------
+   https://newsupdatesapp.herokuapp.com/
 
 ## Description
 This is a platform that takes various news sources and displays them to a user. a user can then navigate to view the various articles written by the site.The purpose is to allow users to catch up on the latest news.
