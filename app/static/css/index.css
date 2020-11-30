@@ -5,8 +5,7 @@ img {
 }
 body {
     background-attachment: fixed;
-    /* background-image: url(../images/news.png); */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../images/nw.png);
     font-size: 24px;
     background-size: cover;
     font-family: 'Karla', sans-serif;
