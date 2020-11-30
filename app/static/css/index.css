@@ -1,0 +1,23 @@
+
+img {
+    height: 200px;
+    width: 200px;
+}
+body {
+    background-attachment: fixed;
+    background-image: url(../images/news.png);
+    font-size: 24px;
+    background-size: cover;
+    font-family: 'Karla', sans-serif;
+}
+.img-sizing {
+    height: 50px;
+    width: 50px;
+}
+.panel {
+    opacity: 0.9;
+}
+.bg-custom {
+    background-color: white;
+    opacity: 0.9;
+}
