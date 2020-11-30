@@ -1,27 +1,27 @@
-class News_source:
-    '''
-    Class for instantiating Source objects
-    '''
-    def __init__(self,name,description,category,url,id):
-        '''
-        Method for instantiating the movie variables
-        '''
-        self.name = name
-        self.description = description
-        self.category =category
-        self.url = url
-        self.id = id
-class News_article:
-    '''
-    Class for instantiating article objects
-    '''
+from flask import Flask
+from flask_bootstrap import Bootstrap
+from config import config_options
 
-    def __init__(self,image,description,timecreated,articlelink):
-        '''
-        Method for instantiating article variables
-        '''
-        #self.source = source
-        self.image = image
-        self.description = description
-        self.timecreated = timecreated
-        self.articlelink = articlelink
+bootstrap = Bootstrap()
+
+def create_app(config_name):
+    '''
+    This is a method for creating the app instance
+    '''
+    app = Flask(__name__)
+
+    #Create the app configurations
+    app.config.from_object(config_options[config_name])
+
+    #Initialise the flask extenstions
+    bootstrap.init_app(app)
+
+    #Registration of the blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+
+    #Setting up config
+    from .requests import configure_request
+    configure_request(app)
+
+    return app

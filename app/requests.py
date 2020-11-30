@@ -79,4 +79,4 @@ def process_articles(article_list):
         article_object = News_article(image,description,timecreated,articlelink)
         articles_list.append(article_object)
 
-    return articles_lis
+    return articles_list
